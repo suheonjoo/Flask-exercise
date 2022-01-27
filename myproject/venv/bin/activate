@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/suheonjoo/Desktop/vscode/python/myproject/venv"
+VIRTUAL_ENV="/Users/suheonjoo/Documents/git/Flask-exercise/myproject/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
