@@ -1,31 +1,25 @@
-from flask import Flask
+from flask import Flask, make_response
 
-from markupsafe import escape
-from flask import url_for
+from flask import render_template
+
+from flask import abort, redirect, url_for
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return 'index'
+    return redirect(url_for('login'))
 
 
 @app.route('/login')
 def login():
-    return 'login'
+    abort(401)
 
 
-@app.route('/user/<username>')
-def profile(username):
-    return f'{username}\'s profile'
-
-
-with app.test_request_context():
-    print(url_for('index'))
-    print(url_for('login'))
-    print(url_for('login', next='/'))
-    print(url_for('profile', username='John Doe'))
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
 
 
 if __name__ == "__main__":
