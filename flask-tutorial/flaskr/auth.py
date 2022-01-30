@@ -38,9 +38,9 @@ def logout():
     return redirect(url_for('index'))
 
 
-@bp.route('/hello')
-def hello1():
-    return 'Hello, World!'
+
+
+
 
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
