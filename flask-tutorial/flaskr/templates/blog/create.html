@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <form method="post">
+  <form method="post">  <!--lable for은 label 태그에 input 태그를 제어하여 상태를 변경가능하게 해주는 것이다-->
     <label for="title">Title</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
     <label for="body">Body</label>

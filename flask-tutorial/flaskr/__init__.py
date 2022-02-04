@@ -39,6 +39,10 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
+    #'/' url에서 들어오는 모든 요청을 하는 endpoint가 index()함수를 실행한다는 것임
+    #말그대로 endpoint가 index'이다라는 의미는 ~~~/index 앞에 뭐든간에 끝에 index가 오는 것을 말한다
+    #여기서는 '/'라는 엔드 포인트에 index()를 실행하라는 것임
+    #index()는 route('/')에 있다 실험해 본게 route('/s')로 수정하니깐 안됨
 
 
     return app
