@@ -37,6 +37,9 @@ def login_required(view): #로그인 권한이 필요할경우의 함수
 def logout():
     session.clear() #logout하면 지금 있는 해당 세션을 나간다
     return redirect(url_for('index'))#그리고 홈화면index 화면으로 redirect한다
+#여기서 데코레이터 동작을 좀더 자세히 설명하자면 auth.logout함수를 가지고 있는 url로의 http 요청이 들어온다
+#그러면 데코레이터가 실행되면서 데코레이터 안의 함수 logout()부분이 실행되는 것이다
+
 
 
 

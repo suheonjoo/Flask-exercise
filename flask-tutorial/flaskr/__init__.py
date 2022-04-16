@@ -43,6 +43,6 @@ def create_app(test_config=None):
     #말그대로 endpoint가 index'이다라는 의미는 ~~~/index 앞에 뭐든간에 끝에 index가 오는 것을 말한다
     #여기서는 '/'라는 엔드 포인트에 index()를 실행하라는 것임
     #index()는 route('/')에 있다 실험해 본게 route('/s')로 수정하니깐 안됨
-
+    #블로그들 등록하고 목록보는 화면으로
 
     return app
